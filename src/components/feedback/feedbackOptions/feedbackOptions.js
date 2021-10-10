@@ -1,8 +1,8 @@
 import shortid from 'shortid';
+import PropTypes from 'prop-types';
 import s from './feedbackOption.module.css';
 
 export default function FeedbackOption({ option, onLeaveFeedback }) {
-  // const { good, neutral, bad } = onLeaveFeedback;
   return (
     <div>
       {option.map(i => {
@@ -21,3 +21,8 @@ export default function FeedbackOption({ option, onLeaveFeedback }) {
     </div>
   );
 }
+
+FeedbackOption.propTypes = {
+  option: PropTypes.array,
+  onLeaveFeedback: PropTypes.func,
+};
